@@ -22,8 +22,9 @@ func main() {
 
 func rootCmd() *cobra.Command {
 	cmd := &cobra.Command{
-		Use:     "polyscan",
-		Short:   "polyscan - multi-language static analyzer",
+		Use:          "polyscan",
+		Short:        "polyscan - multi-language static analyzer",
+		SilenceUsage: true,
 		Long:    "polyscan is a static analyzer that measures code quality across languages.\nIt currently analyzes cyclomatic complexity and code clones for Go, Rust and C++.",
 		Version: version.Version,
 	}
